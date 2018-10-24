@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Todos from './Todos';
+import AddTodo from './AddTodo';
 
 //store the todos in the state
 
@@ -23,6 +24,11 @@ class App extends Component {
     })
   }
 
+  //add a new todo to the list/ array
+  addTodo = (todo) => {
+
+  }
+
 
   render() {
     return (
@@ -30,6 +36,7 @@ class App extends Component {
           <h1>Todo's</h1>
           <Todos todos = {this.state.todos} 
           deleteTodo = {this.deleteTodo}/>
+          <AddTodo addTodo = {this.addTodo}/>
       </div>
     );
   }
