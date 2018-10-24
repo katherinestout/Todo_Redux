@@ -35,7 +35,7 @@ class App extends Component {
     //into this array use spread operator to get each item and empty them in array todos
       let todos = [...this.state.todos, todo];
       this.setState({
-        todos
+        todos: todos
       })
 
   }
@@ -53,5 +53,6 @@ class App extends Component {
 }
 
 //passing Todos the todos prop so you can access the property using {this.state.todos}
+//passed addTodo into AddTodo so you can access it in the handlesubmit in the AddTodos.js
 
 export default App;

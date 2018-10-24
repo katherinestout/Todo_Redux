@@ -4,16 +4,17 @@ class AddTodo extends Component {
     state = {
         content: ''
     }
+//handeler functions:
 
+//set state so that content matches state, so it is insynch with input
     handleChange = (e) => {
        this.setState({
            content: e.target.value
        })
     }
-
     handleSubmit = (e) => {
+        //prevent default action of refreshing page
         e.preventDefault();
-       // console.log(this.state);
        //passing content into this function
        this.props.addTodo(this.state);
        //clearing the input, resetting the state..adding value to input
