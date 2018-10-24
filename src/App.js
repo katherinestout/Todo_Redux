@@ -25,7 +25,15 @@ class App extends Component {
   }
 
   //add a new todo to the list/ array
+  //generate a random number for each id
   addTodo = (todo) => {
+      todo.id = Math.random();
+    //create a new array, and then dumping each item in old array... 
+    //into this array use spread operator to get each item and empty them in array todos
+      let todos = [...this.state.todos, todo];
+      this.setState({
+        todos
+      })
 
   }
 
