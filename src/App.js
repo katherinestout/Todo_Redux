@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Todos from './Todos';
 import AddTodo from './AddTodo';
+import Footer from './Footer';
 
 //store the todos in the state of App component
 //This is some dummy data, each has a property "content"
@@ -42,11 +43,25 @@ class App extends Component {
 
   render() {
     return (
-      <div className="todo-app container">
-          <h1 className="center blue-text">Todo's</h1>
+      <div className="todo-app container ">
+      <div className="row center">
+      <div className="col s12">
+          <h1 className="center blue-text">My ToDo List:</h1>
+          <p className="center teal-text">What do you have to do today?</p>
+          </div>
+     <div className="col s4"></div>
+      <div className="col s4">
           <Todos todos = {this.state.todos} 
               deleteTodo = {this.deleteTodo}/>
           <AddTodo addTodo = {this.addTodo}/>
+          </div>
+          <div className="col s4"></div>
+          <div className="col s12">
+          <Footer/>
+          </div>
+         
+        
+          </div>
       </div>
     );
   }
